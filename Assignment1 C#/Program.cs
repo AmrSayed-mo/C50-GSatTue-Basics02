@@ -41,12 +41,29 @@ namespace Assignment1_CSharp
                 int pages = "464";*/
 
             // Compile-time error
-            int pages3 = int.Parse("464");
-            Console.WriteLine(pages3);
+            //int pages3 = int.Parse("464");
+            //Console.WriteLine(pages3);
 
             #endregion
 
+            #region Question 4
+            /* Q04. Write code that divides 10 by 0 inside a try block, catches the exception, prints "Cannot divide by 
+                   zero", and then prints "Done" in a finally block.*/
+            try
+            {
+                int x = 10, y = 0;
+                Console.WriteLine(x / y);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero");
+            }
+            finally
+            {
+                Console.WriteLine("Done");
+            }
 
+            #endregion
 
         }
     }
