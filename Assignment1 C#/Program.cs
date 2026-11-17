@@ -141,10 +141,19 @@ namespace Assignment1_CSharp
 
             //Q11. Declare an int? year = null;. Print whether it has a value, then assign it 2023 and print its value.
 
-            int? year = null;
-            Console.WriteLine(year.HasValue);
-            year = 2023;
-            Console.WriteLine(year.Value);
+            //int? year = null;
+            //Console.WriteLine(year.HasValue);
+            //year = 2023;
+            //Console.WriteLine(year.Value);
+
+            #endregion
+
+            #region Question 12
+
+            //Q12. Declare a string? reviewer = null;. Print whether it is null.
+
+            string? reviewer = null;
+            Console.WriteLine(reviewer is null);
 
             #endregion
         }
