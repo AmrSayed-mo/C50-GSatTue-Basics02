@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Dynamic;
+using System.Runtime.Intrinsics.X86;
 
 namespace Assignment1_CSharp
 {
@@ -89,9 +90,26 @@ namespace Assignment1_CSharp
 
             //Q07. Given string pagesText = "464";, convert it into an int using the Convert class.
 
-            string pagesText = "464";
-            int pages = Convert.ToInt32(pagesText);
-            Console.WriteLine(pages);
+            //string pagesText = "464";
+            //int pages = Convert.ToInt32(pagesText);
+            //Console.WriteLine(pages);
+
+            #endregion
+
+            #region Question 8
+
+            /* Q08. Given string yearText = "2023";, convert it using int.Parse(). Then given string badText = "abc";,
+            use int.TryParse() to safely try converting it, and print "Invalid number" if it fails. */
+
+            string yearText = "2023";
+            int yearNum = int.Parse(yearText);
+            Console.WriteLine(yearNum);
+
+            string badText = "abc";
+            if (int.TryParse(badText, out int result))
+                Console.WriteLine(result);
+            else
+                Console.WriteLine("Invalid number");
 
             #endregion
         }
